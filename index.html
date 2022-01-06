@@ -189,7 +189,7 @@
 										<span>Jumat 14</span>
 										<span>Januari, 2022</span>
 									</div>
-									<p></p>
+									<p><a href="#" class="btn btn-default btn-sm">Direction</a></p>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4 text-center">
@@ -205,7 +205,7 @@
 										<span>Sabtu 15</span>
 										<span>Januari, 2022</span>
 									</div>
-									<p></p>
+									<p><a href="#" class="btn btn-default btn-sm">Direction</a></p>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4 text-center">
@@ -221,7 +221,7 @@
 										<span>Sabtu 22</span>
 										<span>Januari, 2022</span>
 									</div>
-									<p></p>
+									<p><a href="#" class="btn btn-default btn-sm">Direction</a></p>
 								</div>
 							</div>
 						</div>
@@ -631,8 +631,13 @@
 	<script src="js/main.js"></script>
 
 	<script>
+	var d_temp = new Date(new Date().getTime());
+	var d_now = new Date(new Date("Jan 14, 2022 11:00:00").getTime());
+	// console.log(d_now.getDate());
+	var dist = d_now.getDate()- d_temp.getDate();
+	// console.log(dist)
 
-    var d = new Date(new Date().getTime() + 17 * 24 * 60 * 60 * 1000);
+    var d = new Date(new Date().getTime() + dist * 24 * 60 * 60 * 1000);
     // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
     // default example
