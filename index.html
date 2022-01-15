@@ -216,7 +216,7 @@
 									<div class="event-col">
 										<i class="icon-clock"></i>
 										<span>11.00 WIB</span>
-										<span>15:00 WIB</span>
+										<span>14:00 WIB</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
@@ -345,7 +345,7 @@
 							</a>
 						</li>
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/c6.jpg); ">
-							<a href="#" class="color-4">
+							<a href="images/c6.jpg" class="color-4">
 								<div class="case-studies-summary">
 									<!-- <span>45 Photos</span>
 									<h2>Skater man in the road</h2> -->
@@ -390,7 +390,7 @@
 			<div class="row">
 				<div class="display-t">
 					<div class="display-tc">
-						<div class="col-md-4 col-sm-6 animate-box">
+						<div class="col-md-6 col-sm-6 animate-box">
 							<div class="feature-center">
 								<span class="icon">
 									<i class="icon-users"></i>
@@ -401,22 +401,22 @@
 
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 animate-box">
+						<!-- <div class="col-md-4 col-sm-6 animate-box">
 							<div class="feature-center">
 								<span class="icon">
 									<i class="icon-user"></i>
 								</span>
 
 								<span class="counter js-counter" data-from="0" data-to="300" data-speed="5000" data-refresh-interval="50">1</span>
-								<span class="counter-label">We Catter</span>
+								<span class="counter-label"></span>
 							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box">
+						</div> -->
+						<div class="col-md-6 col-sm-6 animate-box">
 							<div class="feature-center">
 								<span class="icon">
 									<i class="icon-calendar"></i>
 								</span>
-								<span class="counter js-counter" data-from="0" data-to="0" data-speed="5000" data-refresh-interval="50">1</span>
+								<span class="counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50">1</span>
 								<span class="counter-label">Events Done</span>
 							</div>
 						</div>
@@ -641,14 +641,20 @@
 
 	<script>
 	var d_temp = new Date(new Date().getTime());
-	var d_now = new Date(new Date("Jan 14, 2022 11:00:00").getTime());
+	var d_now = new Date(new Date("Jan 15, 2022 18:00:00").getTime());
+	// d_now = convertTZ("2022/01/15 30:10:30 +0000", "Asia/Jakarta") // Tue Apr 20 2012 17:10:30 GMT+0700 (Western Indonesia Time)
+
+	// var d_now = new Date(new Date("Jan 15, 2022 11:02:11 GMT+7").getTime());
 	// console.log(d_now.getDate());
 	var dist = d_now.getDate()- d_temp.getDate();
-	// console.log(dist)
+	console.log(dist)
 
-    var d = new Date(new Date().getTime() + dist * 24 * 60 * 60 * 1000);
+    var d = new Date(new Date().getTime() + dist +(24 * 60 * 60 * 1000));
     // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
+	function convertTZ(date, tzString) {
+    	return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
+	}
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
