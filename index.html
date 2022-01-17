@@ -416,7 +416,7 @@
 								<span class="icon">
 									<i class="icon-calendar"></i>
 								</span>
-								<span class="counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50">1</span>
+								<span class="counter js-counter" data-from="0" data-to="2" data-speed="5000" data-refresh-interval="50">1</span>
 								<span class="counter-label">Events Done</span>
 							</div>
 						</div>
@@ -641,7 +641,7 @@
 
 	<script>
 	var d_temp = new Date(new Date().getTime());
-	var d_now = new Date(new Date("Jan 15, 2022 18:00:00").getTime());
+	var d_now = new Date(new Date("Jan 22, 2022 18:00:00").getTime());
 	// d_now = convertTZ("2022/01/15 30:10:30 +0000", "Asia/Jakarta") // Tue Apr 20 2012 17:10:30 GMT+0700 (Western Indonesia Time)
 
 	// var d_now = new Date(new Date("Jan 15, 2022 11:02:11 GMT+7").getTime());
@@ -649,7 +649,7 @@
 	var dist = d_now.getDate()- d_temp.getDate();
 	console.log(dist)
 
-    var d = new Date(new Date().getTime() + dist +(24 * 60 * 60 * 1000));
+    var d = new Date(new Date().getTime() + dist * 24 * 60 * 60 * 1000);
     // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
 	function convertTZ(date, tzString) {
