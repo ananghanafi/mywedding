@@ -288,7 +288,10 @@
 		
 
 		document.getElementById('nama_ctk').innerHTML = "Nama : "+hadir;
+		if (lok) {
+			
 		document.getElementById('dari_ctk').innerHTML = "Dari : "+lok;
+		}
 		if (d_temp.getDate()==22) {
 			Swal.fire(
 				'Selamat Datang <br>'+hadir+'',
